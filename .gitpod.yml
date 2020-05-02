@@ -2,9 +2,7 @@ image:
   file: .gitpod.Dockerfile
 
 ports:
-  - port: 8000
-    onOpen: open-preview
-  - port: 3306
+  - port: 9000
     onOpen: ignore
 
 tasks:
@@ -18,3 +16,7 @@ tasks:
       mysql -e "GRANT ALL PRIVILEGES ON * . * TO '$DATABASE_USER'@'localhost';";
       mysqladmin reload;
       apachectl start;
+
+vscode:
+  extensions:
+    - felixfbecker.php-debug@1.13.0:WX8Y3EpQk3zgahy41yJtNQ==
