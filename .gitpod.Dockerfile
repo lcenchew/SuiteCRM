@@ -3,7 +3,7 @@ FROM gitpod/workspace-mysql
 USER gitpod
 
 RUN sudo apt-get update -q \
-    && sudo apt-get install php7.4-imap
+    && sudo apt-get install -y php7.4-imap
 
 ENV APACHE_DOCROOT_IN_REPO=""
 
